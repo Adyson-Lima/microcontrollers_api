@@ -55,4 +55,14 @@ RSpec.describe Api::V1::MicrocontrollersController, type: :controller do
     end
   end
   
+  describe 'DELETE /api/v1/microcontrollers/{id}' do
+    it 'Consegue apagar um microcontroller e retornar status 204?' do
+      microcontroller = Microcontroller.last
+      delete :destroy, params: {id: microcontroller.id}
+      
+      expect(Microcontroller.all).not_to include(microcontroller) 
+      expect(response).t have_http_status(204)
+    end
+  end
+  
 end
