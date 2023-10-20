@@ -7,6 +7,10 @@ class Api::V1::MicrocontrollersController < ApplicationController
     render json: @microcontrollers 
   end
   
+  def show
+    render json: @microcontroller
+  end
+  
 private
 
 def set_microcontroller
