@@ -1,0 +1,2 @@
+class Microcontroller < ApplicationRecord
+end
