@@ -39,5 +39,10 @@ RSpec.describe Microcontroller, type: :model do
       expect(@microcontroller).to be_valid
     end
     
+    it 'Microcontroller invalido com campos obrigatorios em branco?' do
+      microcontroller = Microcontroller.new
+      expect(microcontroller).to be_valid
+    end
+    
   end
 end

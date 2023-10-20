@@ -287,25 +287,45 @@ a {
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">Teste de preenchimento de campos do model Microcontroller</dt>
-    <script type="text/javascript">moveProgressBar('20.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_name preenchido?</span><span class='duration'>0.03485s</span></dd>
-    <script type="text/javascript">moveProgressBar('40.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_description preenchido?</span><span class='duration'>0.00074s</span></dd>
-    <script type="text/javascript">moveProgressBar('60.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_manufacturer preenchido?</span><span class='duration'>0.00073s</span></dd>
-    <script type="text/javascript">moveProgressBar('80.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_image preenchido?</span><span class='duration'>0.00055s</span></dd>
+    <script type="text/javascript">moveProgressBar('16.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_name preenchido?</span><span class='duration'>0.03582s</span></dd>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_description preenchido?</span><span class='duration'>0.00084s</span></dd>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_manufacturer preenchido?</span><span class='duration'>0.00060s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_image preenchido?</span><span class='duration'>0.00053s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">Teste de validacao do model Microcontroller</dt>
+    <script type="text/javascript">moveProgressBar('83.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">Microcontroller valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00077s</span></dd>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_3');</script>
+    <script type="text/javascript">makeRed('example_group_3');</script>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Microcontroller valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00075s</span></dd>
+    <dd class="example failed">
+      <span class="failed_spec_name">Microcontroller invalido com campos obrigatorios em branco?</span>
+      <span class="duration">0.36712s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: expect(microcontroller).to be_valid
+    expected #&lt;Microcontroller id: nil, microcontroller_name: nil, microcontroller_description: nil, microcontroller_manufacturer: nil, microcontroller_image: nil, created_at: nil, updated_at: nil&gt; to be valid, but got errors: Microcontroller name can&#39;t be blank, Microcontroller description can&#39;t be blank, Microcontroller manufacturer can&#39;t be blank, Microcontroller image can&#39;t be blank
+  # ./spec/models/microcontroller_spec.rb:44:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/models/microcontroller_spec.rb:44:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">42</span>    it 'Microcontroller invalido com campos obrigatorios em branco?' do
+<span class="linenum">43</span>      microcontroller = Microcontroller.new
+<span class="offending"><span class="linenum">44</span>      expect(microcontroller).to be_valid</span>
+<span class="linenum">45</span>    end
+<span class="linenum">46</span>    
+<span class="linenum">47</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.04044 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "5 examples, 0 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.41736 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "6 examples, 1 failure";</script>
 </div>
 </div>
 </body>
