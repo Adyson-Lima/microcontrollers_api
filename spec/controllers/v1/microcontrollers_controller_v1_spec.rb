@@ -27,4 +27,18 @@ RSpec.describe Api::V1::MicrocontrollersController, type: :controller do
    end
   end
   
+  describe 'POST /api/v1/microcontrollers' do
+    it 'Consegue criar um microcontroller e retornar status 201?' do
+      post :create, params: {microcontroller: {
+      microcontroller_name: @microcontroller.microcontroller_name,
+      microcontroller_description: @microcontroller.microcontroller_description,
+      microcontroller_manufacturer: @microcontroller.microcontroller_manufacturer,
+      microcontroller_image: @microcontroller.microcontroller_image},format: :json}
+      
+      expect(response.body).to include_json(
+      microcontroller_name: @microcontroller.microcontroller_name)
+      expect(response).to have_http_status(201)
+    end
+  end
+  
 end
