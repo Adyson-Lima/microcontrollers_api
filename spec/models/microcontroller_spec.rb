@@ -16,6 +16,11 @@ RSpec.describe Microcontroller, type: :model do
       expect(@microcontroller.microcontroller_description).to eq("Um microcontrolador adequado para iniciar")
     end
     
+    it 'microcontroller_manufacturer preenchido?' do
+      @microcontroller.microcontroller_manufacturer = ""
+      expect(@microcontroller.microcontroller_manufacturer).to eq("microchip")
+    end
+    
     
   end
 end
