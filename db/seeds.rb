@@ -1,7 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+puts 'Gerando microcontroladores...'
+
+10.times do |i|
+  Microcontroller.create(
+    microcontroller_name: ["PIC", "MSP-430","esp32","atmega-328p"].sample, 
+    microcontroller_description: 
+    ["um bom microcontrolador", "bom custo beneficio"].sample, 
+    microcontroller_manufacturer: ["microchip", "china"].sample, 
+    microcontroller_image: ["http://url.com", "http://url2.com"].sample, 
+    )
+end
+
+puts 'Microcontroladores gerados com sucesso!'
