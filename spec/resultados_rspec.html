@@ -288,55 +288,35 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/microcontrollers</dt>
     <script type="text/javascript">moveProgressBar('9.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os microcontrollers e retornar status 200?</span><span class='duration'>0.06162s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os microcontrollers e retornar status 200?</span><span class='duration'>0.07713s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/microcontrollers/{id}</dt>
     <script type="text/javascript">moveProgressBar('18.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um microcontroller especifico e retornar status 200?</span><span class='duration'>0.00533s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um microcontroller especifico e retornar status 200?</span><span class='duration'>0.00608s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">POST /api/v1/microcontrollers</dt>
     <script type="text/javascript">moveProgressBar('27.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue criar um microcontroller e retornar status 201?</span><span class='duration'>0.00876s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue criar um microcontroller e retornar status 201?</span><span class='duration'>0.00953s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">PATCH /api/v1/microcontrollers/{id}</dt>
     <script type="text/javascript">moveProgressBar('36.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um microcontroller e retornar status 200?</span><span class='duration'>0.00742s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um microcontroller e retornar status 200?</span><span class='duration'>0.00785s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_6" class="passed">DELETE /api/v1/microcontrollers/{id}</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_6');</script>
-    <script type="text/javascript">makeRed('example_group_6');</script>
     <script type="text/javascript">moveProgressBar('45.4');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Consegue apagar um microcontroller e retornar status 204?</span>
-      <span class="duration">0.00381s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: delete :destroy, params: {id: microcontroller.id}
-
-  AbstractController::ActionNotFound:
-    The action &#39;destroy&#39; could not be found for Api::V1::MicrocontrollersController
-  # ./spec/controllers/v1/microcontrollers_controller_v1_spec.rb:61:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/controllers/v1/microcontrollers_controller_v1_spec.rb:61:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">59</span>    it 'Consegue apagar um microcontroller e retornar status 204?' do
-<span class="linenum">60</span>      microcontroller = Microcontroller.last
-<span class="offending"><span class="linenum">61</span>      delete :destroy, params: {id: microcontroller.id}</span>
-<span class="linenum">62</span>      
-<span class="linenum">63</span>      expect(Microcontroller.all).not_to include(microcontroller) 
-<span class="linenum">64</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue apagar um microcontroller e retornar status 204?</span><span class='duration'>0.00832s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
@@ -348,26 +328,26 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_8" class="passed">Teste de preenchimento de campos do model Microcontroller</dt>
     <script type="text/javascript">moveProgressBar('54.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_name preenchido?</span><span class='duration'>0.00088s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_name preenchido?</span><span class='duration'>0.00076s</span></dd>
     <script type="text/javascript">moveProgressBar('63.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_description preenchido?</span><span class='duration'>0.00056s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_description preenchido?</span><span class='duration'>0.00057s</span></dd>
     <script type="text/javascript">moveProgressBar('72.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_manufacturer preenchido?</span><span class='duration'>0.00055s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_manufacturer preenchido?</span><span class='duration'>0.00057s</span></dd>
     <script type="text/javascript">moveProgressBar('81.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">microcontroller_image preenchido?</span><span class='duration'>0.00054s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">microcontroller_image preenchido?</span><span class='duration'>0.00067s</span></dd>
   </dl>
 </div>
 <div id="div_group_9" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_9" class="passed">Teste de validacao do model Microcontroller</dt>
     <script type="text/javascript">moveProgressBar('90.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">Microcontroller valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00066s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Microcontroller valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00069s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Microcontroller invalido com campos obrigatorios em branco?</span><span class='duration'>0.00283s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Microcontroller invalido com campos obrigatorios em branco?</span><span class='duration'>0.00159s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.11096 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "11 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.12052 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "11 examples, 0 failures";</script>
 </div>
 </div>
 </body>

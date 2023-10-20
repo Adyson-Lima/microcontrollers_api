@@ -61,7 +61,7 @@ RSpec.describe Api::V1::MicrocontrollersController, type: :controller do
       delete :destroy, params: {id: microcontroller.id}
       
       expect(Microcontroller.all).not_to include(microcontroller) 
-      expect(response).t have_http_status(204)
+      expect(response).to have_http_status(204)
     end
   end
   

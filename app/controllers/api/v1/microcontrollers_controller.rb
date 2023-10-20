@@ -29,6 +29,10 @@ class Api::V1::MicrocontrollersController < ApplicationController
     end
   end
   
+  def destroy
+    @microcontroller.destroy
+  end
+  
 private
 
 def set_microcontroller
