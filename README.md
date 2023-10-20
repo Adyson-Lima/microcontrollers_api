@@ -31,10 +31,10 @@ Pré-requisitos:
 
 ```bash
 # clonar repositório
-git clone https://github.com/Adyson-Lima/#####.git
+git clone https://github.com/Adyson-Lima/microcontrollers_api.git
 
-# entrar na pasta #####
-cd #####
+# entrar na pasta microcontrollers_api
+cd microcontrollers_api
 
 # instalar dependencias com bundle
 bundle
