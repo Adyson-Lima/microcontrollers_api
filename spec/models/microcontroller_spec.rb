@@ -31,7 +31,11 @@ RSpec.describe Microcontroller, type: :model do
   describe 'Teste de validacao do model Microcontroller' do
     
     it 'Microcontroller valido com campos obrigatorios preenchidos?' do
-      @microcontroller.microcontroller_name = ""
+      @microcontroller.microcontroller_name = "ESP32"
+      @microcontroller.microcontroller_description = "Microcontrolador com wifi"
+      @microcontroller.microcontroller_manufacturer = "espressif"
+      @microcontroller.microcontroller_image = "https://br.mouser.com/images/espressifsystems/images/ESP32-S3-IC_SPL.jpg"
+      
       expect(@microcontroller).to be_valid
     end
     
