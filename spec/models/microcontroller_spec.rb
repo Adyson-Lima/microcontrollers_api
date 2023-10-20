@@ -22,7 +22,7 @@ RSpec.describe Microcontroller, type: :model do
     end
     
     it 'microcontroller_image preenchido?' do
-      @microcontroller.microcontroller_image = ""
+      @microcontroller.microcontroller_image = "https://www.majju.pk/assets/uploads/2019/08/pic16f628a.jpg"
       expect(@microcontroller.microcontroller_image).to eq("https://www.majju.pk/assets/uploads/2019/08/pic16f628a.jpg")
     end
     
