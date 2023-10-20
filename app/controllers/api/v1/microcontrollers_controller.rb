@@ -21,6 +21,14 @@ class Api::V1::MicrocontrollersController < ApplicationController
     end
   end
   
+  def update
+    if @microcontroller.update(microcontroller_params)
+      render json: @microcontroller
+    else
+      render json: @microcontroller.errors, status: :internal_server_error
+    end
+  end
+  
 private
 
 def set_microcontroller
