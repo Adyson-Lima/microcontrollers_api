@@ -11,6 +11,16 @@ class Api::V1::MicrocontrollersController < ApplicationController
     render json: @microcontroller
   end
   
+  def create
+    @microcontroller = Microcontroller.new(microcontroller_params)
+    if @microcontroller.save
+      render json: @microcontroller, status: :created, 
+      location: api_v1_microcontroller_url(@microcontroller)
+    else
+      render json: @microcontroller.errors, status: :internal_server_error
+    end
+  end
+  
 private
 
 def set_microcontroller
