@@ -41,4 +41,18 @@ RSpec.describe Api::V1::MicrocontrollersController, type: :controller do
     end
   end
   
+  describe 'PATCH /api/v1/microcontrollers/{id}' do
+    it 'Consegue atualizar um microcontroller e retornar status 200?' do
+      microcontroller = Microcontroller.last
+      patch :update, params: {microcontroller: {
+      microcontroller_name: "msp430",
+      microcontroller_description: @microcontroller.microcontroller_description,
+      microcontroller_manufacturer: @microcontroller.microcontroller_manufacturer,
+      microcontroller_image: @microcontroller.microcontroller_image},id: microcontroller.id}
+      
+      expect(response.body).to include_json(microcontroller_name: "msp430")
+      expect(response).to have_http_status(200)
+    end
+  end
+  
 end
