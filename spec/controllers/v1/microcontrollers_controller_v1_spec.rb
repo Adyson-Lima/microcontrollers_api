@@ -15,9 +15,16 @@ RSpec.describe Api::V1::MicrocontrollersController, type: :controller do
       get :index
       expect(JSON.parse(response.body).size).to eq(1)
       expect(response).to have_http_status(200)
-    end
-    
-    
+    end    
     
   end
+  
+  describe 'GET /api/v1/microcontrollers/{id}' do
+   it 'Consegue listar um microcontroller especifico e retornar status 200?' do
+     get :show, params: {id: @microcontroller.id}
+     expect(response.body).to include_json(id: @microcontroller.id)
+     expect(response).to have_http_status(200)
+   end
+  end
+  
 end
