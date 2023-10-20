@@ -21,6 +21,11 @@ RSpec.describe Microcontroller, type: :model do
       expect(@microcontroller.microcontroller_manufacturer).to eq("microchip")
     end
     
+    it 'microcontroller_image preenchido?' do
+      @microcontroller.microcontroller_image = ""
+      expect(@microcontroller.microcontroller_image).to eq("https://www.majju.pk/assets/uploads/2019/08/pic16f628a.jpg")
+    end
+    
     
   end
 end
