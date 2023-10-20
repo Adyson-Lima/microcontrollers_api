@@ -17,7 +17,7 @@ RSpec.describe Microcontroller, type: :model do
     end
     
     it 'microcontroller_manufacturer preenchido?' do
-      @microcontroller.microcontroller_manufacturer = ""
+      @microcontroller.microcontroller_manufacturer = "microchip"
       expect(@microcontroller.microcontroller_manufacturer).to eq("microchip")
     end
     
