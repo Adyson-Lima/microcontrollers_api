@@ -1,15 +1,15 @@
 # API REST "microcontrollers_api", desenvolvida em Ruby on Rails, com versionamento de recursos para treino de programação em Ruby on Rails. 
 
 ## Endpoints da API 
--GET: localhost/api/v1/#####
+-GET: localhost/api/v1/microcontrollers
 
--GET: localhost/api/v1/#####
+-GET: localhost/api/v1/microcontrollers/{id}
 
--POST: localhost/api/v1/#####
+-POST: localhost/api/v1/microcontrollers
 
--PATCH: localhost/api/v1/#####
+-PATCH: localhost/api/v1/microcontrollers/{id}
 
--DELETE: localhost/api/v1/#####
+-DELETE: localhost/api/v1/microcontrollers/{id}
 
 # Tecnologias utilizadas
 
