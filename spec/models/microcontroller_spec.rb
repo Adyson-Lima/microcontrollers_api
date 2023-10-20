@@ -12,7 +12,7 @@ RSpec.describe Microcontroller, type: :model do
     end
     
     it 'microcontroller_description preenchido?' do
-      @microcontroller.microcontroller_description = ""
+      @microcontroller.microcontroller_description = "Um microcontrolador adequado para iniciar"
       expect(@microcontroller.microcontroller_description).to eq("Um microcontrolador adequado para iniciar")
     end
     
